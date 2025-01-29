@@ -7,12 +7,16 @@
 
 import UIKit
 import Firebase
+import DebugSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        DebugSwift.theme(appearance: .dark)
+        DebugSwift.setup()
+        DebugSwift.show()
         return true
     }
 
@@ -33,3 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIWindow {
+    open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        super.motionEnded(motion, with: event)
+        
+        if motion == .motionShake {
+            DebugSwift.toggle()
+        }
+    }
+}

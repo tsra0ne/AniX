@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.10.2)
+  - DebugSwift (0.3.9)
   - Firebase (11.7.0):
     - Firebase/Core (= 11.7.0)
   - Firebase/Core (11.7.0):
@@ -89,12 +90,13 @@ PODS:
   - nanopb/decode (3.30910.0)
   - nanopb/encode (3.30910.0)
   - PromisesObjC (2.4.0)
-  - SwiftLint (0.58.1)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - DebugSwift (from `https://github.com/DebugSwift/DebugSwift.git`, branch `main`)
   - Firebase
-  - SwiftLint
+  - SnapKit (~> 5.7.1)
 
 SPEC REPOS:
   trunk:
@@ -108,10 +110,21 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
-    - SwiftLint
+    - SnapKit
+
+EXTERNAL SOURCES:
+  DebugSwift:
+    :branch: main
+    :git: https://github.com/DebugSwift/DebugSwift.git
+
+CHECKOUT OPTIONS:
+  DebugSwift:
+    :commit: 7b3d481d1e8464553e8803c18acbd69780f3314c
+    :git: https://github.com/DebugSwift/DebugSwift.git
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  DebugSwift: 2b98f1edb9f19a59dc41cd14cf522249d8758302
   Firebase: a64bf6a8546e6eab54f1c715cd6151f39d2329f4
   FirebaseAnalytics: bc9e565af9044ba8d6c6e4157e4edca8e5fdf7ec
   FirebaseCore: 3227e35f4197a924206fbcdc0349325baf4f5de4
@@ -121,8 +134,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
-  SwiftLint: 6c8820d22c8f74baadd5684e00bb7356c34610a1
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: de7fbe57ed77c9ef081198486c53ce980945c9cd
+PODFILE CHECKSUM: 8813b78cc737596d56d3a44a64561f99b6441819
 
 COCOAPODS: 1.16.2
